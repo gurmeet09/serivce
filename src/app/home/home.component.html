@@ -1,0 +1,28 @@
+<body>
+  <img class="bgimage" src="http://www.akrbtech.com/Website/Images/rms_operation.png" alt="customer flow">
+  <div class="showdata">
+  <div class="showtable">
+      <h2>Customer Detail Table </h2>
+      <div class="form-group">
+          <div class="col-md-6" style="padding: 12px;">
+            <input type="text" [(ngModel)]="searchText" class="form-control" placeholder="Search By Name" />
+          </div>
+        </div>
+
+    <div class="col-md-12">
+      <table class="table table-responsive table-hover">
+        <tr>
+          <th>ID</th>
+          <th (click)="sort()">Name</th>
+          <th>Email ID</th>
+        </tr>
+        <tr *ngFor="let item of names | namesearch: searchText | namesort:usepipe">
+          <td>{{item.id}}</td>
+          <td>{{item.name}}</td>
+          <td>{{item.email}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+</body>
