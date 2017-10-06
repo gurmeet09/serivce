@@ -10,7 +10,8 @@ import { CustomerdetailComponent } from './customerdetail/customerdetail.compone
 import { CustomerlistComponent } from './customerlist/customerlist.component';
 import { NamesortPipe } from './namesort.pipe';
 import { NamesearchPipe } from './namesearch.pipe';
-import { UserService } from './user.service';
+import { RatingComponent } from './rating/rating.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +19,8 @@ import { UserService } from './user.service';
     CustomerdetailComponent,
     CustomerlistComponent,
     NamesortPipe,
-    NamesearchPipe
+    NamesearchPipe,
+    RatingComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +28,7 @@ import { UserService } from './user.service';
     HttpModule,
     RouterModule.forRoot( route )
   ],
-  providers: [UserService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

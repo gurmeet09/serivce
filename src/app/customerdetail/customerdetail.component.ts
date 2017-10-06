@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-customerdetail',
@@ -7,11 +6,10 @@ import { UserService } from '../user.service';
   styleUrls: ['./customerdetail.component.css']
 })
 export class CustomerdetailComponent implements OnInit {
-  title: any;
-  constructor(private service: UserService) { }
+
+  constructor() { }
 
   ngOnInit() {
-    this.title = this.service.getUsers();
-    console.log('hello', this.title);
   }
-  }
+
+}

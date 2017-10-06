@@ -13,16 +13,26 @@
       <table class="table table-responsive table-hover">
         <tr>
           <th>ID</th>
-          <th (click)="sort()">Name</th>
+          <th (click)="sort()">Name &#8593;</th>
           <th>Email ID</th>
+          <th>Rating</th>
+          <th>Rating No</th>
         </tr>
         <tr *ngFor="let item of names | namesearch: searchText | namesort:usepipe">
           <td>{{item.id}}</td>
           <td>{{item.name}}</td>
           <td>{{item.email}}</td>
+          <td>
+            <app-rating [rating]='item.rating'
+                        [itemId]='item.id'
+                        (ratingClick)='ratingComponetClick($event)'>
+            </app-rating>
+          </td>
+          <td>{{item.rating}}</td>
         </tr>
       </table>
     </div>
   </div>
 </div>
 </body>
+<div class="namesort:usepipe"></div>
